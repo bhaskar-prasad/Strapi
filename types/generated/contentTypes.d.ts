@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiUserDataUserData extends Struct.CollectionTypeSchema {
   collectionName: 'users_data';
   info: {
+    description: '';
     displayName: 'UserData';
     pluralName: 'users-data';
     singularName: 'user-data';
@@ -392,6 +393,7 @@ export interface ApiUserDataUserData extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    newId: Schema.Attribute.UID;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
